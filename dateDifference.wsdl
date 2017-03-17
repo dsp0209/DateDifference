@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+			 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+			 xmlns:tns="DateDifference"
+			 xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+			 xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+			 xmlns="http://schemas.xmlsoap.org/wsdl/"
+			 targetNamespace="DateDifference">
+<types>
+<xsd:schema targetNamespace="DateDifference">
+ <xsd:complexType name="getDateDifference">
+  <xsd:all>
+   <xsd:element name="startDate" type="xsd:dateTime"/>
+   <xsd:element name="endDate" type="xsd:dateTime"/>
+  </xsd:all>
+ </xsd:complexType>
+
+   <xsd:element name="return" type="xsd:dateTime"/>
+
+</xsd:schema>
+
+</types>
+<message name="getDateDifferenceRequest">
+  <part name="startDate" type="xsd:dateTime" />
+  <part name="endDate" type="xsd:dateTime" />
+</message>
+
+<message name="getDateDifferenceResponse">
+  <part name="return" type="tns:return" />
+</message>
+
+<portType name="DateDifferencePortType">
+  <operation name="getDateDifference">
+  	<input message="tns:getDateDifferenceRequest"/>
+    <output message="tns:getDateDifferenceResponse"/>
+  </operation>
+</portType>
+
+<binding name="DateDifferenceBinding" type="tns:DateDifferencePortType">
+  <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+  <operation name="getDateDifference">
+    <soap:operation soapAction="uri:DateDifference/getDateDifference" style="rpc"/>
+    <input><soap:body use="encoded" namespace="uri:DateDifference" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="uri:DateDifference" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+</binding>
+
+<service name="DateDifference">
+  <port name="DateDifferencePort" binding="tns:DateDifferenceBinding">
+    <soap:address location="http://localhost/soapserv/server.php"/>
+  </port>
+</service>
+</definitions>
