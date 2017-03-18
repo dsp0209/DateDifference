@@ -23,13 +23,17 @@ print("Не правильный формат даты");
 <html>
     <head>
         <title>Soap клиент</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <meta charset="utf-8">
     </head>
     <body>
-        <form method="POST" action="">
-            <input type="text" name="startDate">
-            <input type="text" name="endDate">
-            <input type="submit" value="Отправить">
-        </form>
+        <div>
+            <form method="POST" action="">
+                <input type="text" name="startDate" placeholder="Введите:">
+                <input type="text" name="endDate" placeholder="Введите:">
+                <input type="submit" value="Отправить">
+            </form>  
+        </div>
         <?php
         if(isset($result)){
          echo $result;
