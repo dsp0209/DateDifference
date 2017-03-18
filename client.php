@@ -29,8 +29,8 @@ print("Не правильный формат даты");
     <body>
         <div>
             <form method="POST" action="">
-                <input type="text" name="startDate" placeholder="Введите:">
-                <input type="text" name="endDate" placeholder="Введите:">
+                <input type="text" name="startDate" placeholder="Введите начальную дату:">
+                <input type="text" name="endDate" placeholder="Введите конечную дату:">
                 <input type="submit" value="Отправить">
             </form>  
         </div>
