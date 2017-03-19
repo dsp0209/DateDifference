@@ -32,7 +32,7 @@ print("Не правильный формат даты");
     <body>
         <header>
             <div class="logo">
-                DEAMON
+                DAEMON
             </div>
         </header>
        
@@ -53,7 +53,7 @@ print("Не правильный формат даты");
         </div><!---- End .main-content ---->
         
         <footer>
-            Copyright © 2016 <a href="https://vk.com/pastushenko_danial" target="_blank">Demon.ru</a>
+            Copyright © 2016 <a href="https://vk.com/pastushenko_danial" target="_blank">Daemon.ru</a>
         </footer>
         
         <?php
