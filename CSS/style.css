@@ -1,9 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Diplomata+SC');
 * {
     margin: 0;
     padding: 0;
     font-size: 20px;
     box-sizing: border-box;
 }
+html {
+    position: relative;
+    min-height: 100%;
+}
+/***** Header *****/
+header {
+    width: 100%;
+    background-color: #a2aad4;
+    height: 50px;
+    
+}
+header .logo {
+    font-family: 'Diplomata SC', cursive; 
+    font-size: 30px;
+    width: 1000x;
+    float: left;
+    margin: 5px 0 0 10px;
+}
+/***** End Header ****/
+/***** Main content ******/
 .main-content {
     margin: 30px auto;
     background-color: #a7a7a7;
@@ -43,6 +64,26 @@ input[type="submit"]:hover {
 ::-moz-placeholder          {color:#c0392b;}/* Firefox 19+ */
 :-moz-placeholder           {color:#c0392b;}/* Firefox 18- */
 :-ms-input-placeholder      {color:#c0392b;}
+/***** End Main content *****/
+/***** Footer ******/
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #82878b;
+    width: 100%;
+    color: #dddbdb;
+}
+footer a:visited {
+    color: #800080;
+}
+footer a:hover {
+    text-decoration: underline;
+    color: blue; 
+}
+/***** End Footer *****/
 /**** Extra small devices ***/
 @media (max-width: 768px) {
     .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {float: left;} 
